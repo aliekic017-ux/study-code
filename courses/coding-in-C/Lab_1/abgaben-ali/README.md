@@ -1,0 +1,1 @@
+Das sind meine Lösungen für den Lab-1
