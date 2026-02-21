@@ -19,7 +19,7 @@ int main()
     // get and verify input
     printf("Please enter your word (max. 100 characters): ");
 
-    if (fgets(palindrome, sizeof(palindrome), stdin) == NULL)
+    if (fgets(palindrome, sizeof(palindrome), stdin) == NULL) 
     {
         printf("Invalid input.\n");
         return -1;

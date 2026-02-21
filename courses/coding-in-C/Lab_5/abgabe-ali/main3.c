@@ -17,8 +17,8 @@ int main ()
     *(p_variablen + 4) = 1;
     *(p_variablen + 6) = 1;
 
-    int temporär [10] = {0};     // Definition eines weiteren (temporären) pointers
-    int *p_temporär = temporär;
+    int temporär [10] = {0};     // Definition eines weiteren (temporären) Arrays
+    int *p_temporär = temporär;  // Pointer auf den temporären Arrays mit Datentyp int
 
         printf("The time 0: ");  // Ausgabe der time0: 0 0 1 0 1 0 1 0 0 0 
     for (int i = 0; i < 10; i++)
@@ -34,10 +34,10 @@ for (int t = 0; t < steps; t++)
 
     for (int j = 0; j < 10; j++)     // temporäre Pointer auf 0 auf jedem einzelnen Element resetten
     {
-        *(p_temporär+j) = 0;
-    }
+        *(p_temporär+j) = 0;        // sonst mit Werten behaftet aufgrund des Schleifendurchgangs
+    } 
     
-    // Suchen der 1 im aktuellen Pointer
+    // Suchen der 1 im aktuellen Pointer p_variablen
     for (int k = 0; k < 10; k++)
     {
         if (*(p_variablen + k ) == 1)
@@ -56,6 +56,7 @@ for (int t = 0; t < steps; t++)
                 
             }
 
+            // Grenzen definieren 0 - 9 --> das kein Wert out of range springen kann 
             if (neuePos < 0)
             {
                 neuePos = 0;
@@ -66,15 +67,15 @@ for (int t = 0; t < steps; t++)
             }
             
             
-           if (temporär[neuePos]== 0)
+           if (temporär[neuePos]== 0) // Wenn an der neuen Stelle, eine 0 ist dann füge eine 1 ein wenn da schon eine 1 ist dann schreibe 0 --> Kollision erkannt
            {
-             temporär[neuePos] = 1;
+             temporär[neuePos] = 1; // an neuer Stelle war keine ,,1" --> 1 wird reingeschrieben 
                 
            }
            else
            {
-            temporär[neuePos] =0;
-            printf("Collision on index %d\n", neuePos);
+            temporär[neuePos] =0; // an der neuen Stellen war schon eine ,,1" --> 0 wird reingeschrieben
+            printf("Collision on place %d \n", neuePos); // --> Ausgabe: an der Stelle wurde eine Kollision erkannt
            }
            
             
