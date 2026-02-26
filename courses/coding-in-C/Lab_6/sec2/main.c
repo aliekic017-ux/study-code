@@ -27,7 +27,7 @@
 
     int main ()
 {
-    struct car auto1 = {10.0, 25.0, "Cla200"};
+    struct car auto1 = {10.0, 25.0, "Cla"};
 
      float aktuell = refuel(&auto1, 10);
      printf("akuteller Tankstand: %f", aktuell);
