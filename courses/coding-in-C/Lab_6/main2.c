@@ -13,7 +13,7 @@ struct Sensor
     int id;                  // Sensor-ID
     double threshold;       // Schwellenwert ( Grenzwert zur Erkennung)
     struct SensorData data[3000];
-    int object_detection[3000];
+    int object_detection[3000];  // binäre Operation 1 oder 0
 };
 
 

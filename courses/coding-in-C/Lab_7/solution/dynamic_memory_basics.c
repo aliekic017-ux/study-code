@@ -4,7 +4,7 @@
 int main()
 {
     // 1. Allocate memory for a single integer using malloc
-    int *ptr = malloc(sizeof *ptr);
+    int *ptr = malloc(sizeof *ptr); // dereferenzierung *ptr = N
     if (ptr == NULL)
     {
         printf("Memory allocation failed.\n");
@@ -49,7 +49,7 @@ int main()
     }
 
     // 4. Resize array to 2*N using realloc
-    int *p_temp = realloc(arr, 2 * (*ptr) * sizeof(int));
+    int *p_temp = realloc(arr, 2 * (*ptr) * sizeof(int));  //ptemp, da sonst wenn es fehlschlägt die Daten von Arr verloren gehen
 
     if (p_temp == NULL)
     {
