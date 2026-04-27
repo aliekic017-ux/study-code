@@ -1,6 +1,6 @@
-# Lab 2: From C to C++
+# Lab 2: Basics of OOP
 
-This lab focuses on getting started with C++ especially for programmers familiar with C.
+This lab focuses on the basics of object-oriented programming in C++ including UML class and object diagrams.
 
 All the following sections of this lab are based on the following levels of dificulty:
 
@@ -101,7 +101,7 @@ The goal of this section is to familiarize yourself with the C++ coding conventi
 
 ### Task Description
 * Navigate to the __coding-in-C++__ folder and open the __cpp_coding_conventions.md__
-* Read the remaining points (starting with section 18) of the convention in detail
+* Read the remaining points (starting with section 19) of the convention in detail
 * Write down any point that is unclear to you for later discussions
 
 ## 🟢 Section IV: Fluent Drink Builder

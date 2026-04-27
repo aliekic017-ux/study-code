@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #111111; stroke-width: 2; }
+      .sep { stroke: #111111; stroke-width: 1.5; }
+      .text { font-family: Arial, Helvetica, sans-serif; font-size: 16px; fill: #111111; }
+      .title { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; fill: #111111; }
+      .small { font-family: Arial, Helvetica, sans-serif; font-size: 14px; fill: #111111; }
+      .line { fill: none; stroke: #111111; stroke-width: 2; }
+      .dash { fill: none; stroke: #111111; stroke-width: 2; stroke-dasharray: 7 5; }
+      .diamond-fill { fill: #111111; stroke: #111111; stroke-width: 2; }
+      .diamond-open { fill: #ffffff; stroke: #111111; stroke-width: 2; }
+      .tri { fill: #ffffff; stroke: #111111; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Class boxes -->
+  <!-- Person -->
+  <g id="Person">
+    <rect class="box" x="500" y="40" width="200" height="95"/>
+    <line class="sep" x1="500" y1="75" x2="700" y2="75"/>
+    <line class="sep" x1="500" y1="105" x2="700" y2="105"/>
+    <text class="title" x="600" y="63" text-anchor="middle">Person</text>
+    <text class="text" x="515" y="96"># name : string</text>
+  </g>
+
+  <!-- Member -->
+  <g id="Member">
+    <rect class="box" x="290" y="220" width="230" height="120"/>
+    <line class="sep" x1="290" y1="255" x2="520" y2="255"/>
+    <line class="sep" x1="290" y1="290" x2="520" y2="290"/>
+    <text class="title" x="405" y="243" text-anchor="middle">Member</text>
+    <text class="text" x="305" y="278">- memberId : int</text>
+    <text class="text" x="305" y="315">+ borrow(book : Book) : Loan</text>
+  </g>
+
+  <!-- Librarian -->
+  <g id="Librarian">
+    <rect class="box" x="680" y="220" width="250" height="145"/>
+    <line class="sep" x1="680" y1="255" x2="930" y2="255"/>
+    <line class="sep" x1="680" y1="315" x2="930" y2="315"/>
+    <text class="title" x="805" y="243" text-anchor="middle">Librarian</text>
+    <text class="text" x="695" y="278">- employeeId : int</text>
+    <text class="text" x="695" y="302">- salary : double</text>
+    <text class="text" x="695" y="340">+ register(member : Member) : void</text>
+  </g>
+
+  <!-- Book -->
+  <g id="Book">
+    <rect class="box" x="500" y="500" width="245" height="180"/>
+    <line class="sep" x1="500" y1="535" x2="745" y2="535"/>
+    <line class="sep" x1="500" y1="610" x2="745" y2="610"/>
+    <text class="title" x="622.5" y="523" text-anchor="middle">Book</text>
+    <text class="text" x="515" y="558">- title : string</text>
+    <text class="text" x="515" y="582">- isbn : string</text>
+    <text class="text" x="515" y="606">- available : bool</text>
+    <text class="text" x="515" y="635">+ borrow() : bool</text>
+    <text class="text" x="515" y="659">+ returnBook() : void</text>
+    <text class="text" x="515" y="683">+ isAvailable() : bool</text>
+  </g>
+
+  <!-- PrintedBook -->
+  <g id="PrintedBook">
+    <rect class="box" x="250" y="745" width="230" height="130"/>
+    <line class="sep" x1="250" y1="780" x2="480" y2="780"/>
+    <line class="sep" x1="250" y1="835" x2="480" y2="835"/>
+    <text class="title" x="365" y="768" text-anchor="middle">PrintedBook</text>
+    <text class="text" x="265" y="803">- shelfCode : string</text>
+    <text class="text" x="265" y="827">- pageCount : int</text>
+    <text class="text" x="265" y="860">+ printLocation() : void</text>
+  </g>
+
+  <!-- EBook -->
+  <g id="EBook">
+    <rect class="box" x="765" y="745" width="240" height="130"/>
+    <line class="sep" x1="765" y1="780" x2="1005" y2="780"/>
+    <line class="sep" x1="765" y1="835" x2="1005" y2="835"/>
+    <text class="title" x="885" y="768" text-anchor="middle">EBook</text>
+    <text class="text" x="780" y="803">- fileSizeMB : double</text>
+    <text class="text" x="780" y="827">- downloadUrl : string</text>
+    <text class="text" x="780" y="860">+ download() : void</text>
+  </g>
+
+  <!-- Library -->
+  <g id="Library">
+    <rect class="box" x="35" y="385" width="260" height="145"/>
+    <line class="sep" x1="35" y1="420" x2="295" y2="420"/>
+    <line class="sep" x1="35" y1="475" x2="295" y2="475"/>
+    <text class="title" x="165" y="408" text-anchor="middle">Library</text>
+    <text class="text" x="50" y="443">- name : string</text>
+    <text class="text" x="50" y="467">- books : Book[1000]</text>
+    <text class="text" x="50" y="500">+ addBook(book : Book) : bool</text>
+  </g>
+
+  <!-- Loan -->
+  <g id="Loan">
+    <rect class="box" x="815" y="445" width="255" height="170"/>
+    <line class="sep" x1="815" y1="480" x2="1070" y2="480"/>
+    <line class="sep" x1="815" y1="565" x2="1070" y2="565"/>
+    <text class="title" x="942.5" y="468" text-anchor="middle">Loan</text>
+    <text class="text" x="830" y="503">- loanDate : string</text>
+    <text class="text" x="830" y="527">- dueDate : string</text>
+    <text class="text" x="830" y="551">- returned : bool</text>
+    <text class="text" x="830" y="590">+ close() : void</text>
+  </g>
+
+  <!-- Inheritance: Member -> Person -->
+  <!-- Person bottom border y=135, triangle apex at 135 -->
+  <path class="line" d="M405 220 L405 175 L575 175"/>
+  <line class="line" x1="575" y1="175" x2="575" y2="153"/>
+  <polygon class="tri" points="575,135 562,153 588,153"/>
+
+  <!-- Inheritance: Librarian -> Person -->
+  <path class="line" d="M805 220 L805 175 L625 175"/>
+  <line class="line" x1="625" y1="175" x2="625" y2="153"/>
+  <polygon class="tri" points="625,135 612,153 638,153"/>
+
+  <!-- Inheritance: PrintedBook -> Book -->
+  <!-- Book bottom y=680; triangle apex on Book border -->
+  <path class="line" d="M365 745 L365 710 L595 710"/>
+  <line class="line" x1="595" y1="710" x2="595" y2="698"/>
+  <polygon class="tri" points="595,680 582,698 608,698"/>
+
+  <!-- Inheritance: EBook -> Book -->
+  <path class="line" d="M885 745 L885 710 L650 710"/>
+  <line class="line" x1="650" y1="710" x2="650" y2="698"/>
+  <polygon class="tri" points="650,680 637,698 663,698"/>
+
+  <!-- Library composition Book: diamond touches Library right border at x=295, line ends at Book left border x=500 -->
+  <polygon class="diamond-fill" points="295,455 310,443 325,455 310,467"/>
+  <line class="line" x1="325" y1="455" x2="500" y2="455"/>
+  <line class="line" x1="500" y1="455" x2="500" y2="500"/>
+  <text class="small" x="330" y="445">1</text>
+  <text class="small" x="470" y="490">0..*</text>
+
+  <!-- Library aggregation Member: diamond touches Library top border at y=385, routed to Member left border x=290 -->
+  <polygon class="diamond-open" points="165,385 153,370 165,355 177,370"/>
+  <path class="line" d="M165 355 L165 280 L290 280"/>
+  <text class="small" x="178" y="352">1</text>
+  <text class="small" x="248" y="272">0..*</text>
+
+  <!-- Library association Librarian: from Library top/right to Librarian left border -->
+  <path class="line" d="M295 420 L410 420 L410 395 L680 395 L680 330"/>
+  <text class="small" x="305" y="412">1</text>
+  <text class="small" x="652" y="388">1..*</text>
+
+  <!-- Member association Loan: from Member right border to Loan left/top border -->
+  <path class="line" d="M520 300 L610 300 L610 430 L815 430 L815 505"/>
+  <text class="small" x="530" y="292">1</text>
+  <text class="small" x="782" y="422">0..*</text>
+
+  <!-- Loan association Book: line exactly from Loan left border to Book right border -->
+  <line class="line" x1="815" y1="560" x2="745" y2="560"/>
+  <text class="small" x="785" y="552">1</text>
+  <text class="small" x="752" y="578">1</text>
+
+</svg>

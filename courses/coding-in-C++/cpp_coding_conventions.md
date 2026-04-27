@@ -722,7 +722,7 @@ Classes should protect their internal state and expose a clear interface.
 class BankAccount
 {
 private:
-    double m_balance;
+    double balance;
 
 public:
     void deposit(double amount);
@@ -846,7 +846,7 @@ Manual memory management must be minimized.
 
 ### Good
 ```cpp
-Sensor sensor;
+Sensor sensor; // do not use dynamic memory if possible
 ```
 
 ### Bad

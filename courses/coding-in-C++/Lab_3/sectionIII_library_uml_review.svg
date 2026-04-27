@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+  <defs>
+    <marker id="arrowOpen" markerWidth="14" markerHeight="12" refX="13" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 1 L 13 6 L 1 11 Z" fill="white" stroke="#222" stroke-width="1.5"/>
+    </marker>
+    <marker id="diamondFilled" markerWidth="16" markerHeight="12" refX="15" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 Z" fill="#222" stroke="#222" stroke-width="1.5"/>
+    </marker>
+    <marker id="diamondOpen" markerWidth="16" markerHeight="12" refX="15" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M 1 6 L 8 1 L 15 6 L 8 11 Z" fill="white" stroke="#222" stroke-width="1.5"/>
+    </marker>
+    <style>
+      .classbox { fill: #fff; stroke: #222; stroke-width: 1.5; }
+      .title { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; text-anchor: middle; }
+      .text { font-family: Arial, sans-serif; font-size: 13px; }
+      .small { font-family: Arial, sans-serif; font-size: 12px; }
+      .line { stroke: #222; stroke-width: 1.5; fill: none; }
+      .dash { stroke-dasharray: 6 4; }
+    </style>
+  </defs>
+
+  <!-- Library -->
+  <rect class="classbox" x="430" y="30" width="240" height="110"/>
+  <line class="line" x1="430" y1="62" x2="670" y2="62"/>
+  <line class="line" x1="430" y1="104" x2="670" y2="104"/>
+  <text class="title" x="550" y="51">Library</text>
+  <text class="text" x="440" y="82">- name: string</text>
+  <text class="text" x="440" y="99">- books: Book[1000]</text>
+  <text class="text" x="440" y="124">+ addBook(b: Book): bool</text>
+
+  <!-- Book -->
+  <rect class="classbox" x="80" y="220" width="240" height="130"/>
+  <line class="line" x1="80" y1="252" x2="320" y2="252"/>
+  <line class="line" x1="80" y1="312" x2="320" y2="312"/>
+  <text class="title" x="200" y="241">Book</text>
+  <text class="text" x="90" y="272">+ title: string</text>
+  <text class="text" x="90" y="289">+ isbn: string</text>
+  <text class="text" x="90" y="306">+ available: bool</text>
+  <text class="text" x="90" y="332">+ borrow(): void</text>
+
+  <!-- Member -->
+  <rect class="classbox" x="430" y="220" width="240" height="130"/>
+  <line class="line" x1="430" y1="252" x2="670" y2="252"/>
+  <line class="line" x1="430" y1="312" x2="670" y2="312"/>
+  <text class="title" x="550" y="241">Member</text>
+  <text class="text" x="440" y="272">- name: string</text>
+  <text class="text" x="440" y="289">- memberId: int</text>
+  <text class="text" x="440" y="306">- borrowed: Book[5]</text>
+  <text class="text" x="440" y="332">+ borrow(b: Book): void</text>
+
+  <!-- Librarian -->
+  <rect class="classbox" x="780" y="220" width="240" height="130"/>
+  <line class="line" x1="780" y1="252" x2="1020" y2="252"/>
+  <line class="line" x1="780" y1="312" x2="1020" y2="312"/>
+  <text class="title" x="900" y="241">Librarian</text>
+  <text class="text" x="790" y="272">- name: string</text>
+  <text class="text" x="790" y="289">- employeeId: int</text>
+  <text class="text" x="790" y="306">+ salary: double</text>
+  <text class="text" x="790" y="332">+ register(m: Member): void</text>
+
+  <!-- PrintedBook -->
+  <rect class="classbox" x="60" y="500" width="230" height="105"/>
+  <line class="line" x1="60" y1="532" x2="290" y2="532"/>
+  <line class="line" x1="60" y1="572" x2="290" y2="572"/>
+  <text class="title" x="175" y="521">PrintedBook</text>
+  <text class="text" x="70" y="552">- shelfCode: string</text>
+  <text class="text" x="70" y="569">- pageCount: int</text>
+  <text class="text" x="70" y="592">+ printLocation(): void</text>
+
+  <!-- EBook -->
+  <rect class="classbox" x="330" y="500" width="230" height="105"/>
+  <line class="line" x1="330" y1="532" x2="560" y2="532"/>
+  <line class="line" x1="330" y1="572" x2="560" y2="572"/>
+  <text class="title" x="445" y="521">EBook</text>
+  <text class="text" x="340" y="552">- fileSizeMB: double</text>
+  <text class="text" x="340" y="569">- downloadUrl: string</text>
+  <text class="text" x="340" y="592">+ download(): void</text>
+
+  <!-- Loan -->
+  <rect class="classbox" x="690" y="500" width="250" height="130"/>
+  <line class="line" x1="690" y1="532" x2="940" y2="532"/>
+  <line class="line" x1="690" y1="592" x2="940" y2="592"/>
+  <text class="title" x="815" y="521">Loan</text>
+  <text class="text" x="700" y="552">- loanDate: string</text>
+  <text class="text" x="700" y="569">- dueDate: string</text>
+  <text class="text" x="700" y="586">- returned: bool</text>
+  <text class="text" x="700" y="612">+ close(): void</text>
+
+  <!-- Relationships -->
+  <!-- Library composition Book -->
+  <path class="line" d="M 430 110 L 200 110 L 200 220" marker-start="url(#diamondFilled)"/>
+  <text class="small" x="390" y="103">1</text>
+  <text class="small" x="210" y="210">0..1000</text>
+
+  <!-- Library aggregation Member -->
+  <path class="line" d="M 550 140 L 550 220" marker-start="url(#diamondOpen)"/>
+  <text class="small" x="558" y="158">1</text>
+  <text class="small" x="558" y="210">0..*</text>
+
+  <!-- Library association Librarian -->
+  <path class="line" d="M 670 110 L 900 110 L 900 220"/>
+  <text class="small" x="682" y="103">1</text>
+  <text class="small" x="910" y="210">1..*</text>
+
+  <!-- Inheritance PrintedBook/EBook to Book -->
+  <path class="line" d="M 175 500 L 175 430 L 160 430 L 160 350" marker-end="url(#arrowOpen)"/>
+  <path class="line" d="M 445 500 L 445 430 L 240 430 L 240 350" marker-end="url(#arrowOpen)"/>
+
+  <!-- Member association Loan -->
+  <path class="line" d="M 610 350 L 760 500"/>
+  <text class="small" x="617" y="370">1</text>
+  <text class="small" x="730" y="492">0..*</text>
+
+  <!-- Loan composition Book (intentionally questionable) -->
+  <path class="line" d="M 690 555 L 320 555 L 320 350" marker-start="url(#diamondFilled)"/>
+  <text class="small" x="660" y="548">1</text>
+  <text class="small" x="330" y="370">1</text>
+
+  <!-- Librarian inheritance Member (intentionally questionable) -->
+  <path class="line" d="M 900 350 L 900 430 L 620 430 L 620 350" marker-end="url(#arrowOpen)"/>
+
+</svg>
