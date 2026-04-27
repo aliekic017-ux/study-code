@@ -1,0 +1,8 @@
+ID: 102, Fahrzeug: E_Klasse, Dauer (in min): 30
+ID: 103, Fahrzeug: Sprinter, Dauer (in min): 60
+ID: 104, Fahrzeug: A_Klasse, Dauer (in min): 20
+ID: 105, Fahrzeug: GLC, Dauer (in min): 35
+ID: 106, Fahrzeug: EQE, Dauer (in min): 40
+ID: 107, Fahrzeug: CLA, Dauer (in min): 25
+ID: 201, Fahrzeug: AMG_GT, Dauer (in min): 90
+ID: 202, Fahrzeug: V_Klasse, Dauer (in min): 50

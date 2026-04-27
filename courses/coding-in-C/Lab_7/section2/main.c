@@ -18,7 +18,7 @@ Node *add_element(double value)
     if (newElement == NULL)
     {
         printf("Speicherallokation fehlgeschlagen");
-        return 0;
+        return NULL;
     }
     newElement->value = value;
     newElement->next  = NULL;

@@ -1,0 +1,6 @@
+101 Hammer OK
+102 Schraubendreher WARTUNG
+103 Zange DEFEKT
+104 Bohrer OK
+105 Saege WARTUNG
+106 Messgeraet OK

@@ -1,0 +1,7 @@
+101 Motorcheck 45
+102 Bremsenservice 30
+103 Inspektion 60
+104 Reifenwechsel 20
+105 Lichttest 15
+106 Oelwechsel 25
+107 Batterietest 10

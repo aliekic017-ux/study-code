@@ -1,0 +1,10 @@
+301 Start 1
+302 Temperaturwarnung 5
+303 Sensorfehler 4
+304 Neustart 2
+305 Wartung 3
+306 Druckabfall 4
+307 Stop 5
+308 Reset 2
+309 Testlauf 1
+310 Stoerung 5

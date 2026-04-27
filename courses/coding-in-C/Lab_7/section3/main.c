@@ -46,6 +46,8 @@ Song *add_song(playlist *playlist, char *title, char *artist )
    strcpy(newSong->Artist, artist);
    newSong->next = NULL;
 
+   
+
    // Wenn noch kein Song in der Playlist ist newSong das erste Lied in der Playlist 
    // Prüfen, ob head == NULL oder nicht
    if (playlist->head == NULL)
@@ -95,4 +97,42 @@ void delete_firstSong(playlist *playlist)
     free(temp->Artist);
     free(temp->Title);
     free(temp);
+}
+
+void delete_playlist (playlist *playlist)
+{
+    Song *iterator;  // temporärer Iteratorm, der als Hilfszeiger dient 
+
+    while (playlist->head != NULL)
+    {
+        iterator = playlist->head; 
+        playlist->head = playlist->head->next;
+
+        free(iterator);
+        free(iterator->Artist);
+        free(iterator->Title);
+    }
+    return;
+    
+}
+
+int main ()
+{
+    playlist aliplaylist;
+    
+    init_playlist(&aliplaylist);
+
+    add_song(&aliplaylist, "Crawling", "Linkin Park");
+    add_song(&aliplaylist, "Layla", "Eric Clapton");
+    add_song(&aliplaylist, "Esperanto", "Max Herre");
+
+    print_playlist(&aliplaylist);
+
+    delete_firstSong(&aliplaylist);
+    printf("\n");
+    print_playlist(&aliplaylist);
+    delete_playlist (&aliplaylist);
+   
+
+    return 0;
 }

@@ -1,0 +1,7 @@
+ID: 307, Text: Stop, Priotität: 5
+ID: 306, Text: Druckabfall, Priotität: 4
+ID: 305, Text: Wartung, Priotität: 3
+ID: 304, Text: Neustart, Priotität: 2
+ID: 303, Text: Sensorfehler, Priotität: 4
+ID: 302, Text: Temperaturwarnung, Priotität: 5
+ID: 301, Text: Start, Priotität: 1

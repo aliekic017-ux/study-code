@@ -1,0 +1,1 @@
+ID: 102, Bezeichnng: Schraubendreher, Zustand: WARTUNGID: 103, Bezeichnng: Zange, Zustand: DEFEKTID: 104, Bezeichnng: Bohrer, Zustand: OKID: 105, Bezeichnng: Saege, Zustand: WARTUNGID: 106, Bezeichnng: Messgeraet, Zustand: OKID: 121, Bezeichnng: Bohrmaschine, Zustand: Sehr gutID: 122, Bezeichnng: Heckenschere, Zustand: Sehr gut

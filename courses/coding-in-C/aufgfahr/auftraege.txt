@@ -1,0 +1,7 @@
+101 C_Klasse 45
+102 E_Klasse 30
+103 Sprinter 60
+104 A_Klasse 20
+105 GLC 35
+106 EQE 40
+107 CLA 25

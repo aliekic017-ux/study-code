@@ -1,0 +1,6 @@
+ID: 102, Text: Klausurvorbereitung
+ID: 103, Text: Werkstatttermin
+ID: 104, Text: CodeUebung
+ID: 105, Text: Formelsammlung
+ID: 12, Text: Schlafen
+ID: 14, Text: Trinken

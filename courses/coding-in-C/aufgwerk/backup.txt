@@ -1,0 +1,7 @@
+ID: 103, Titel: Inspektion, Dauer(in min): 60
+ID: 104, Titel: Reifenwechsel, Dauer(in min): 20
+ID: 105, Titel: Lichttest, Dauer(in min): 15
+ID: 106, Titel: Oelwechsel, Dauer(in min): 25
+ID: 107, Titel: Batterietest, Dauer(in min): 10
+ID: 112, Titel: Service B, Dauer(in min): 150
+ID: 114, Titel: Montage, Dauer(in min): 150
