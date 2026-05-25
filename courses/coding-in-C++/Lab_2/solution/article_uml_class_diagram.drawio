@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram name="Article UML Class Diagram" id="article-uml-class-diagram">
+    <mxGraphModel dx="788" dy="445" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="article" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" value="Article" vertex="1">
+          <mxGeometry height="350" width="620" x="110" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="attributes" parent="article" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="- name: std::string&lt;br&gt;- price: double&lt;br&gt;- stock: int&lt;br&gt;- category: std::string&lt;br&gt;- id: int" vertex="1">
+          <mxGeometry height="105" width="620" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t1uEvGOAGg8fDXWg9MN1-13" parent="article" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" value="" vertex="1">
+          <mxGeometry height="8" width="620" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="methods" parent="article" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;whiteSpace=wrap;html=1;" value="+ Article(in article_name: const std::string&amp;amp;, in article_price: double, in article_stock: int, in article_category: const std::string&amp;amp;, in article_id: int)&lt;br&gt;+ set_price(in new_price: double): bool&lt;br&gt;+ sell(in amount: int): bool&lt;br&gt;+ restock(in amount: int): bool&lt;br&gt;+ apply_discount(in percent: double): bool&lt;br&gt;+ get_price(): double {query}&lt;br&gt;+ get_stock(): int {query}&lt;br&gt;+ get_id(): int {query}&lt;br&gt;+ get_name(): const std::string&amp;amp; {query}&lt;br&gt;+ get_category(): const std::string&amp;amp; {query}&lt;br&gt;+ is_available(): bool {query}&lt;br&gt;+ print_info(): void {query}" vertex="1">
+          <mxGeometry height="207" width="620" y="143" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

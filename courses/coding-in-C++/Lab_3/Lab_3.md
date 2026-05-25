@@ -432,7 +432,7 @@ To support stealing, the `Inventory` should provide controlled methods such as:
 
 ---
 
-### 🟢 Task Part 1 – UML Class Diagram
+### 🟡 Task Part 1 – UML Class Diagram
 
 Create a UML class diagram based on the requirements above.
 

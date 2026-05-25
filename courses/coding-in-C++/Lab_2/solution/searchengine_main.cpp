@@ -4,7 +4,11 @@
  *
  * This file creates several web resources, executes multiple queries,
  * and prints the corresponding search results.
- * How to compile: g++ main.cpp searchEngine.cpp searchQuery.cpp webResource.cpp -o searchEngineApp
+ * How to compile:
+ * In Terminal: g++ searchengine_main.cpp searchEngine.cpp searchQuery.cpp webResource.cpp -o searchEngineApp
+ * With CMake: Adapt CMakeLists.txt in solution folder and use (on Windows when you followed Lab1_Setup)
+ * cmake -S . -B build -G "MSYS Makefiles" -DCMAKE_CXX_COMPILER=g++
+ * cmake --build build
  */
 
 #include <iostream>

@@ -42,7 +42,7 @@ public:
 class Inventory
 {
 private:
-    static const unsigned int MAX_SLOTS = 10;
+    static constexpr unsigned int MAX_SLOTS = 10;
 
     std::string items[MAX_SLOTS];
     unsigned int item_count;

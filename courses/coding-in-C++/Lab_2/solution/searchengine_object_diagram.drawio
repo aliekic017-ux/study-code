@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Object Diagram" id="SearchEngineObjectDiagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="engine" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;searchEngine1:SearchEngine&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;totalQueries = 2&lt;br&gt;webResources = {cppReference, umlGuide, drawioManual, doxygenDocs}&lt;br&gt;currentQuery = queryUml&lt;br&gt;currentSearchResults = {umlGuide, drawioManual}" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="390" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;cppReference:WebResource&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;url = &amp;quot;https://cppreference.com&amp;quot;&lt;br&gt;content = &amp;quot;C++ documentation and examples&amp;quot;&lt;br&gt;ranking = 95&lt;br&gt;/isPopular = true" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;umlGuide:WebResource&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;url = &amp;quot;https://uml-diagrams.org&amp;quot;&lt;br&gt;content = &amp;quot;UML class and object diagrams&amp;quot;&lt;br&gt;ranking = 88&lt;br&gt;/isPopular = true" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;drawioManual:WebResource&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;url = &amp;quot;https://drawio.com/doc&amp;quot;&lt;br&gt;content = &amp;quot;draw.io XML diagram guide&amp;quot;&lt;br&gt;ranking = 74&lt;br&gt;/isPopular = false" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="640" y="300" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;doxygenDocs:WebResource&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;url = &amp;quot;https://doxygen.nl/manual&amp;quot;&lt;br&gt;content = &amp;quot;Doxygen comments and commands&amp;quot;&lt;br&gt;ranking = 82&lt;br&gt;/isPopular = true" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="940" y="300" width="280" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;queryCpp:SearchQuery&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;query = &amp;quot;C++ constexpr const&amp;quot;&lt;br&gt;maxResults = 10" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="230" y="540" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="q2" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;u&gt;queryUml:SearchQuery&lt;/u&gt;&lt;/div&gt;&lt;hr&gt;query = &amp;quot;UML object diagram drawio&amp;quot;&lt;br&gt;maxResults = 5" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fontFamily=Helvetica;fontSize=12;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="620" y="540" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="er1" value="webResources" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="engine" target="r1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er2" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="engine" target="r2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er3" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="engine" target="r3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er4" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="engine" target="r4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eq1" value="queryHistory" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="engine" target="q1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eq2" value="currentQuery" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="engine" target="q2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
