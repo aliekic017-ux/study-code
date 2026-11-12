@@ -181,41 +181,82 @@ Complete the following table.
 | Explicit focus on risk analysis? | | | | |
 | Well suited to changing requirements? | | | | |
 
-## 🟢 Section II: Agile Principles
+## 🟡 Section II: The Marshmallow Tower Challenge
 
-### Task Description
+### Objective
 
-The Agile Manifesto contains twelve principles that describe important ideas for agile software development.
-In this exercise, you will first reflect on these principles individually and then discuss them in a small team.
+Build the **tallest possible free-standing tower** using only the materials provided.
+The marshmallow must be placed at the very top of the tower.
 
-#### 1. Individual Preparation
+### Team Setup
 
-* Read the twelve principles of the Agile Manifesto by yourself
-* Select the two principles that are most important from your point of view
-* Write down a short explanation for each selected principle
-* Be prepared to explain why these two principles matter to you
+* Team size: 3-4 participants
+* Total building time: 18 minutes, divided into two sprints
 
-#### 2. Group Discussion
+### Materials
 
-Gather in a group of three people.
+Each team receives:
 
-In your group:
+* 20 uncooked spaghetti sticks
+* 1 meter of masking tape
+* 1 meter of string
+* 1 marshmallow
+* 1 pair of scissors
 
-* Each person explains which two principles they selected and why they selected them
-* Discuss similarities and differences between your choices
-* Decide together which one principle is the most important one for your team
+### Rules
 
-#### 3. Short Presentation
+1. The tower must stand on its own without any external support.
+2. The entire marshmallow must be placed at the top of the tower.
+3. You may break the spaghetti and cut the tape and string as needed.
+4. You may not use any additional materials.
+5. The tower must remain standing without anyone touching or supporting it when time runs out.
+6. The height is measured from the table surface to the top of the marshmallow.
 
-Choose one person from your group to briefly present your result.
+### Challenge Schedule
 
-The presentation should explain:
+#### 1. Sprint 1: Build
 
-* Which principle your team selected
-* Why your team selected this particular principle
-* How this principle could influence the way a software team works
+Time: 8 minutes
 
-No need to prepare slides for this presentation. A short oral explanation is sufficient.
+Work together to design, build, and test your tower.
+
+#### 2. Retrospective
+
+Time: 3 minutes
+
+Pause your work and discuss the following questions with your team.
+
+* What went well during the first sprint?
+* What problems did you encounter?
+* What will you do differently in the second sprint?
+
+Agree on at least one concrete improvement for the next sprint.
+
+#### 3. Sprint 2: Improve
+
+Time: 7 minutes
+
+Improve your tower and ensure that it can support the marshmallow.
+
+#### 4. Final Evaluation
+
+Time: 5 minutes
+
+Stop building and step away from your tower.
+Each tower will be measured.
+The team with the tallest free-standing tower wins.
+
+### Final Reflection
+
+Time: 10 minutes
+
+Discuss your experiences with the other teams:
+
+* How did your team approach the challenge?
+* Did you build and test early, or spend most of your time planning?
+* How did the intermediate review and retrospective influence your approach?
+* What did you learn about teamwork, prototyping, feedback, and iterative development?
+* How can these lessons be applied to agile software development?
 
 ## 🟡 Section III: Scrum Paper Airplane Game
 
@@ -362,35 +403,57 @@ No need to prepare slides for this presentation. A short oral explanation is suf
 ## 🟢 Section V: Getting Started with Enterprise Architect
 
 In this short exercise, you will get familiar with Enterprise Architect as a tool for documenting requirements.
-The goal is to explore the interface, create one or two simple requirements, and notice which features could support requirements engineering work.
+The goal is to create one or two simple requirements and generate a first requirements document.
 
 ### Task Description
 
 Work individually or at max in pairs.
-This task should take about 10 to 15 minutes.
+This task should take about 20 to 30 minutes.
 If you need orientation, use the Enterprise Architect User Guide pages on [Getting Started](https://sparxsystems.org/enterprise_architect_user_guide/17.1/getting_started/ea_getting_started.html) and [Creating and Viewing Requirements](https://sparxsystems.com/enterprise_architect_user_guide/17.1/modeling_domains/creating_and_viewing_requirements.html).
 
-#### 1. Explore the Tool
+#### 1. Create Requirements
 
-Open Enterprise Architect and take a few minutes to look around.
+Create one or two first requirements for the alarm-clock application from Section IV.
 
-Focus especially on:
+Use the following workflow:
 
-* Where projects, packages, and elements are shown
-* How new elements can be created
-* Where requirement details can be entered
-* Which views or diagrams seem useful for requirements engineering
+* Open Enterprise Architect
+* Select **Create new**
+* Click **Model**, then use the **Select:** icon and choose **New Package**
+* Select **Only Package** and set the name to **Requirements**
+* Right-click the **Requirements** package and select **Specification Manager**; alternatively, use **Ctrl+0**
+* Use the **Add New** button, then choose **Other -> Requirements > Requirement Type**
+  * After selecting the requirement type once, it is sufficient to press the **Add New** button directly instead of using the arrow on the right side of the button again
+* Right-click the table columns to open the **Field Chooser**
+  * Use the **Field Chooser** to add or remove columns
+* Enter the main requirement text in **Notes**; the **Notes** window is located at the bottom right of the screen
 
-#### 2. Create Requirements
+For each requirement, fill in the most relevant fields:
 
-Create one or two requirements for the alarm-clock application from Section IV.
+* **Item** -> short title
+* **Notes** or description -> actual requirement text
+* **Status** -> for example **Proposed**, **Approved**, or **Implemented**
+* **Priority**
+* **Alias** -> optional own requirement ID, for example **SYS-ICE-042**
+* **Stereotype**
+* **Author**
 
-For each requirement:
+Structure the document through packages. Create additional packages if they help you organize functional and non-functional requirements.
 
-* Give it a clear name
-* Add a short description
-* Decide whether it is functional or non-functional
-* Save it in a suitable package or model structure
+#### 2. Generate Documentation
+
+Create a first requirements document from your Enterprise Architect model.
+
+Use the following workflow:
+
+* Switch to the **Publish** area
+* Select the package that should be documented
+* Open **Report Builder** and choose **Generate Documentation**
+* Define the filename and file type
+* Select a template of your choice
+* Click **Generate** and optionally **View**
+
+Note: In professional use, a suitable custom template, individual columns, and automatic values such as IDs usually have to be created first.
 
 
 ## 🟢 Section VI: Getting Started with GitLab Issues
@@ -500,9 +563,9 @@ Focus only on priority and product value.
 
 #### 3. Play Product Owner and Developers: Improve Stories (25 minutes)
 
-Starting from the top of the ordered backlog, each team member takes one backlog item.
+Starting from the top of the ordered backlog, each team member takes two backlog items.
 
-For your selected item:
+For your selected items:
 
 * Improve the item into a clearer user story in GitLab
 * Add acceptance criteria
@@ -535,11 +598,12 @@ The rest of the team plays the Developers and should check:
 * Is the story small enough to be discussed and estimated?
 
 Improve the story together until the team agrees that it is good enough for estimation.
-Update the issue or item with the improved version.
+Update the item with the improved version.
 
 #### 4. Planning Poker (15 minutes)
 
-Estimate the improved stories with planning poker.
+Estimate the improved stories with planning poker. Use any online planning poker tool or app of your choice e.g. [scrumpoker-online.org](https://www.scrumpoker-online.org/de/).
+
 The person who prepared and presented the story acts as Product Owner for that story and does not estimate it.
 All other team members estimate as Developers.
 
@@ -588,3 +652,39 @@ The presentation should explain:
 * One difficulty your team noticed during refinement or estimation
 
 No slides are required. A short oral explanation is sufficient.
+
+## 🟢 Section VIII: Agile Principles
+
+### Task Description
+
+The Agile Manifesto contains twelve principles that describe important ideas for agile software development.
+In this exercise, you will first reflect on these principles individually and then discuss them in a small team.
+
+#### 1. Individual Preparation
+
+* Read the twelve principles of the Agile Manifesto by yourself
+* Select the two principles that are most important from your point of view
+* Write down a short explanation for each selected principle
+* Be prepared to explain why these two principles matter to you
+
+#### 2. Group Discussion
+
+Gather in a group of three people.
+
+In your group:
+
+* Each person explains which two principles they selected and why they selected them
+* Discuss similarities and differences between your choices
+* Decide together which one principle is the most important one for your team
+
+#### 3. Short Presentation
+
+Choose one person from your group to briefly present your result.
+
+The presentation should explain:
+
+* Which principle your team selected
+* Why your team selected this particular principle
+* How this principle could influence the way a software team works
+
+No need to prepare slides for this presentation. A short oral explanation is sufficient.

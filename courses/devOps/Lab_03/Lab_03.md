@@ -99,6 +99,8 @@ Start by opening the official Docker setup page: [https://www.docker.com/get-sta
 Install Docker Desktop or check that Docker is already installed on your system.
 In this exercise, you will learn the basic idea of containers and practice the most important Docker commands.
 
+Note: You can also use Docker in GitHub Codespaces, but you will not be able to run containers with a GUI or access the host network.
+
 ### Task Description
 
 Create a small project folder called `docker-basics`.

@@ -194,3 +194,85 @@ Show the dependencies between components in your diagram.
 
 Use cylinders for databases even if they are not standard UML components.
 
+
+## 🔴 Section V: Timing Analysis of an Embedded Controller
+
+In this exercise, you will determine execution times, calculate CPU utilization, verify deadlines, and propose architectural improvements.
+The challenge is to distinguish sufficient processing capacity from actually meeting deadlines.
+
+### Task Description
+
+#### System: Greenhouse Climate Controller
+
+A greenhouse controller reads environmental sensors, calculates ventilation commands, checks measurements for plausibility, updates a local display, and records diagnostic information.
+All five tasks execute on a single CPU.
+Sensor readings, control calculations, and plausibility checks have strict timing requirements; delayed display updates and diagnostics are less urgent, but still have deadlines.
+
+Use the following timing model:
+
+* Each task releases its first job at `t = 0`, then releases another job every period `T`.
+* A job's absolute deadline is its release time plus its relative deadline `D`. Completing exactly at the deadline is acceptable.
+* The scheduler always selects the ready job with the highest priority. Priority 1 is the highest priority.
+* Execution is **non-preemptive**: once a job starts, it runs to completion, even if a higher-priority job becomes ready.
+* Whenever a job finishes, the scheduler chooses the highest-priority job that is ready, including jobs released at that exact moment. The CPU is idle only when no job is ready.
+* Jobs that miss a deadline are still completed. Jobs of the same task are processed in release order.
+* Tasks do not wait for one another, perform blocking I/O, or share locks. All listed operations consume CPU time. Ignore scheduling and context-switch overhead.
+* For the schedule, assume every job takes its WCET. The controller is initially idle, with no unfinished jobs from before `t = 0`.
+
+#### Timing Data
+
+All times are in milliseconds. The execution-time descriptions give upper bounds for the individual operations.
+Operations listed together execute sequentially unless explicitly described as alternatives.
+
+| Task | Priority | Period `T` | Relative deadline `D` | Execution-time description |
+| --- | --- | --- | --- | --- |
+| Read Sensors | 1 | 10 | 4 | Initialization: 0.2 ms; then read four sensor channels at 0.2 ms per channel |
+| Calculate Control | 2 | 10 | 7 | Preparation: 0.5 ms; then five calculation steps at 0.4 ms per step |
+| Check Plausibility | 3 | 20 | 10 | Setup: 0.3 ms; then three checks at 0.4 ms per check |
+| Update Display | 4 | 40 | 40 | Prepare the frame: 0.8 ms; then render eight fields at 0.4 ms per field |
+| Record Diagnostics | 5 | 100 | 100 | Collect data: 1 ms; then **either** normal processing: 2 ms, **or** recovery processing: 5 ms |
+
+Normal and recovery processing are mutually exclusive.
+Recovery processing can occur in any diagnostic job, including consecutive jobs.
+Do not assume that an uncommon execution path can be ignored.
+
+#### 1. Determine WCET and CPU Utilization
+
+Determine the WCET `C` of each task and its activation frequency in Hz.
+Then calculate each task's CPU utilization and the total CPU utilization using `U_i = C_i / T_i`.
+
+| Task | WCET `C` [ms] | Frequency [Hz] | Utilization [%] |
+| --- | --- | --- | --- |
+| Read Sensors | | | |
+| Calculate Control | | | |
+| Check Plausibility | | | |
+| Update Display | | | |
+| Record Diagnostics | | | |
+| **Total** | — | — | |
+
+A teammate argues: “The total utilization is below 100%, and every task's WCET is shorter than its deadline. Therefore, all deadlines are guaranteed.”
+Assess this claim. State what these two checks establish and what still needs to be verified.
+
+#### 2. Construct the Schedule and Verify Deadlines
+
+Draw a CPU timeline for `0 <= t < 40 ms`, showing job releases, execution intervals, and idle intervals.
+Include every job released in this interval, and mark its deadline.
+
+For each job, determine its completion time and response time, where response time is measured from release to completion.
+Identify every deadline miss in this interval and calculate how late the job finishes.
+
+| Task / job release | Absolute deadline [ms] | Start [ms] | Completion [ms] | Response time [ms] | Deadline met? |
+| --- | --- | --- | --- | --- | --- |
+| | | | | | |
+
+Explain the cause of any deadline misses using specific intervals from your timeline.
+
+#### 3. Refine the Architecture
+
+Propose one architectural or scheduling change that resolves the deadline misses identified in Task 2.
+For example, you could split long-running work into smaller chunks or introduce preemptive scheduling.
+Keep all five tasks, their total WCETs, periods, and deadlines unchanged. Keep the simultaneous releases at `t = 0`.
+
+* Describe your change and explain how it allows urgent jobs to run sooner.
+* Draw the revised CPU timeline for `0 <= t < 40 ms` and verify that every job released in this interval meets its deadline.
+* State whether CPU utilization changes and explain one tradeoff of your design.

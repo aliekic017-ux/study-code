@@ -1,0 +1,45 @@
+# Copy this file to .gitlab-ci.yml at the root of your Section I repository.
+# Keep src/, include/, and .clang-format at that root.
+# Copy linting_sensor_project/ (including .clang-tidy) into the same repository.
+stages:
+  - verify
+  - lint
+
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_PIPELINE_SOURCE == "push"'
+      when: never
+    - if: '$CI_COMMIT_BRANCH && $CI_PIPELINE_SOURCE == "push"'
+
+check_format:
+  stage: verify
+  image: ubuntu:24.04
+  before_script:
+    - apt-get update
+    - apt-get install --yes --no-install-recommends clang-format-18
+    - clang-format-18 --version
+  script:
+    - |
+      if [ ! -f .clang-format ]; then
+        echo "Missing .clang-format: add your project formatting configuration."
+        exit 1
+      fi
+    - clang-format-18 --style=file --dry-run --Werror src/*.cpp include/*.hpp
+
+# A later stage runs only after the formatting stage succeeds.
+lint_code:
+  stage: lint
+  image: ubuntu:24.04
+  before_script:
+    - apt-get update
+    - apt-get install --yes --no-install-recommends clang-tidy-18 g++
+    - clang-tidy-18 --version
+  script:
+    - cd linting_sensor_project
+    - |
+      if [ ! -f .clang-tidy ]; then
+        echo "Missing .clang-tidy: commit the lint configuration with the project."
+        exit 1
+      fi
+    - clang-tidy-18 --config-file=.clang-tidy --warnings-as-errors='*' src/*.cpp include/*.hpp -- -std=c++17 -Wall -Wextra -Iinclude

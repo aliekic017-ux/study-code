@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+<title id="title">Task 2: Non-preemptive CPU timeline, 0 to 40 milliseconds</title>
+<desc id="desc">Five task lanes show execution, release arrows, and deadline triangles. Diagnostics runs from 9 to 15 milliseconds, blocking sensor and control jobs released at 10. They finish at 16 and 18.5, missing deadlines at 14 and 17. An idle lane shows unused CPU intervals.</desc>
+<rect width="1440" height="720" fill="#ffffff"/>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#172b4d}.small{font-size:13px}.label{font-size:17px;font-weight:600}.tick{font-size:14px}.bar{font-size:13px;font-weight:600;fill:white}</style>
+<text x="40" y="44" class="label" style="font-size:26px">CPU timeline: non-preemptive scheduling</text>
+<text x="40" y="74" class="small" >Every job uses its WCET. Priority 1 is highest. Times are in milliseconds. Execution bars are drawn to scale.</text>
+<line x1="240.0" y1="110" x2="240.0" y2="585" stroke="#d5dce6" />
+<text x="240.0" y="608" class="tick" text-anchor="middle">0</text>
+<line x1="380.0" y1="110" x2="380.0" y2="585" stroke="#d5dce6" />
+<text x="380.0" y="608" class="tick" text-anchor="middle">5</text>
+<line x1="520.0" y1="110" x2="520.0" y2="585" stroke="#d5dce6" />
+<text x="520.0" y="608" class="tick" text-anchor="middle">10</text>
+<line x1="660.0" y1="110" x2="660.0" y2="585" stroke="#d5dce6" />
+<text x="660.0" y="608" class="tick" text-anchor="middle">15</text>
+<line x1="800.0" y1="110" x2="800.0" y2="585" stroke="#d5dce6" />
+<text x="800.0" y="608" class="tick" text-anchor="middle">20</text>
+<line x1="940.0" y1="110" x2="940.0" y2="585" stroke="#d5dce6" />
+<text x="940.0" y="608" class="tick" text-anchor="middle">25</text>
+<line x1="1080.0" y1="110" x2="1080.0" y2="585" stroke="#d5dce6" />
+<text x="1080.0" y="608" class="tick" text-anchor="middle">30</text>
+<line x1="1220.0" y1="110" x2="1220.0" y2="585" stroke="#d5dce6" />
+<text x="1220.0" y="608" class="tick" text-anchor="middle">35</text>
+<line x1="1360.0" y1="110" x2="1360.0" y2="585" stroke="#d5dce6" />
+<text x="1360.0" y="608" class="tick" text-anchor="middle">40</text>
+<rect x="240" y="115" width="1120" height="62" rx="4" fill="#f8fafc"/>
+<line x1="240.0" y1="115" x2="240.0" y2="177" stroke="#e2e8f0" />
+<line x1="380.0" y1="115" x2="380.0" y2="177" stroke="#e2e8f0" />
+<line x1="520.0" y1="115" x2="520.0" y2="177" stroke="#e2e8f0" />
+<line x1="660.0" y1="115" x2="660.0" y2="177" stroke="#e2e8f0" />
+<line x1="800.0" y1="115" x2="800.0" y2="177" stroke="#e2e8f0" />
+<line x1="940.0" y1="115" x2="940.0" y2="177" stroke="#e2e8f0" />
+<line x1="1080.0" y1="115" x2="1080.0" y2="177" stroke="#e2e8f0" />
+<line x1="1220.0" y1="115" x2="1220.0" y2="177" stroke="#e2e8f0" />
+<line x1="1360.0" y1="115" x2="1360.0" y2="177" stroke="#e2e8f0" />
+<text x="40" y="144" class="label" >Read Sensors</text>
+<text x="40" y="165" class="small" >Priority 1</text>
+<rect x="240.0" y="133" width="28.0" height="27" rx="3" fill="#1565c0"/>
+<text x="254.0" y="151" class="bar" text-anchor="middle">0</text>
+<line x1="240.0" y1="176" x2="240.0" y2="165" stroke="#334155" stroke-width="1.5"/>
+<path d="M 236.0 169 L 240.0 163 L 244.0 169" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 347.0 118 L 357.0 118 L 352.0 127 Z" fill="#334155"/>
+<line x1="520.0" y1="167" x2="660.0" y2="167" stroke="#b42318" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="660.0" y="133" width="28.0" height="27" rx="3" fill="#1565c0" stroke="#b42318" stroke-width="3"/>
+<text x="674.0" y="151" class="bar" text-anchor="middle">10</text>
+<line x1="520.0" y1="176" x2="520.0" y2="165" stroke="#334155" stroke-width="1.5"/>
+<path d="M 516.0 169 L 520.0 163 L 524.0 169" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 627.0 118 L 637.0 118 L 632.0 127 Z" fill="#b42318"/>
+<text x="632.0" y="113" class="small" text-anchor="middle" style="fill:#b42318;font-weight:600">D=14</text>
+<rect x="800.0" y="133" width="28.0" height="27" rx="3" fill="#1565c0"/>
+<text x="814.0" y="151" class="bar" text-anchor="middle">20</text>
+<line x1="800.0" y1="176" x2="800.0" y2="165" stroke="#334155" stroke-width="1.5"/>
+<path d="M 796.0 169 L 800.0 163 L 804.0 169" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 907.0 118 L 917.0 118 L 912.0 127 Z" fill="#334155"/>
+<rect x="1080.0" y="133" width="28.0" height="27" rx="3" fill="#1565c0"/>
+<text x="1094.0" y="151" class="bar" text-anchor="middle">30</text>
+<line x1="1080.0" y1="176" x2="1080.0" y2="165" stroke="#334155" stroke-width="1.5"/>
+<path d="M 1076.0 169 L 1080.0 163 L 1084.0 169" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 1187.0 118 L 1197.0 118 L 1192.0 127 Z" fill="#334155"/>
+<rect x="240" y="193" width="1120" height="62" rx="4" fill="#f8fafc"/>
+<line x1="240.0" y1="193" x2="240.0" y2="255" stroke="#e2e8f0" />
+<line x1="380.0" y1="193" x2="380.0" y2="255" stroke="#e2e8f0" />
+<line x1="520.0" y1="193" x2="520.0" y2="255" stroke="#e2e8f0" />
+<line x1="660.0" y1="193" x2="660.0" y2="255" stroke="#e2e8f0" />
+<line x1="800.0" y1="193" x2="800.0" y2="255" stroke="#e2e8f0" />
+<line x1="940.0" y1="193" x2="940.0" y2="255" stroke="#e2e8f0" />
+<line x1="1080.0" y1="193" x2="1080.0" y2="255" stroke="#e2e8f0" />
+<line x1="1220.0" y1="193" x2="1220.0" y2="255" stroke="#e2e8f0" />
+<line x1="1360.0" y1="193" x2="1360.0" y2="255" stroke="#e2e8f0" />
+<text x="40" y="222" class="label" >Calculate Control</text>
+<text x="40" y="243" class="small" >Priority 2</text>
+<rect x="268.0" y="211" width="70.0" height="27" rx="3" fill="#00796b"/>
+<text x="303.0" y="229" class="bar" text-anchor="middle">0</text>
+<line x1="240.0" y1="254" x2="240.0" y2="243" stroke="#334155" stroke-width="1.5"/>
+<path d="M 236.0 247 L 240.0 241 L 244.0 247" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 431.0 196 L 441.0 196 L 436.0 205 Z" fill="#334155"/>
+<line x1="520.0" y1="245" x2="688.0" y2="245" stroke="#b42318" stroke-width="2" stroke-dasharray="5 4"/>
+<rect x="688.0" y="211" width="70.0" height="27" rx="3" fill="#00796b" stroke="#b42318" stroke-width="3"/>
+<text x="723.0" y="229" class="bar" text-anchor="middle">10</text>
+<line x1="520.0" y1="254" x2="520.0" y2="243" stroke="#334155" stroke-width="1.5"/>
+<path d="M 516.0 247 L 520.0 241 L 524.0 247" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 711.0 196 L 721.0 196 L 716.0 205 Z" fill="#b42318"/>
+<text x="716.0" y="191" class="small" text-anchor="middle" style="fill:#b42318;font-weight:600">D=17</text>
+<rect x="828.0" y="211" width="70.0" height="27" rx="3" fill="#00796b"/>
+<text x="863.0" y="229" class="bar" text-anchor="middle">20</text>
+<line x1="800.0" y1="254" x2="800.0" y2="243" stroke="#334155" stroke-width="1.5"/>
+<path d="M 796.0 247 L 800.0 241 L 804.0 247" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 991.0 196 L 1001.0 196 L 996.0 205 Z" fill="#334155"/>
+<rect x="1108.0" y="211" width="70.0" height="27" rx="3" fill="#00796b"/>
+<text x="1143.0" y="229" class="bar" text-anchor="middle">30</text>
+<line x1="1080.0" y1="254" x2="1080.0" y2="243" stroke="#334155" stroke-width="1.5"/>
+<path d="M 1076.0 247 L 1080.0 241 L 1084.0 247" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 1271.0 196 L 1281.0 196 L 1276.0 205 Z" fill="#334155"/>
+<rect x="240" y="271" width="1120" height="62" rx="4" fill="#f8fafc"/>
+<line x1="240.0" y1="271" x2="240.0" y2="333" stroke="#e2e8f0" />
+<line x1="380.0" y1="271" x2="380.0" y2="333" stroke="#e2e8f0" />
+<line x1="520.0" y1="271" x2="520.0" y2="333" stroke="#e2e8f0" />
+<line x1="660.0" y1="271" x2="660.0" y2="333" stroke="#e2e8f0" />
+<line x1="800.0" y1="271" x2="800.0" y2="333" stroke="#e2e8f0" />
+<line x1="940.0" y1="271" x2="940.0" y2="333" stroke="#e2e8f0" />
+<line x1="1080.0" y1="271" x2="1080.0" y2="333" stroke="#e2e8f0" />
+<line x1="1220.0" y1="271" x2="1220.0" y2="333" stroke="#e2e8f0" />
+<line x1="1360.0" y1="271" x2="1360.0" y2="333" stroke="#e2e8f0" />
+<text x="40" y="300" class="label" >Check Plausibility</text>
+<text x="40" y="321" class="small" >Priority 3</text>
+<rect x="338.0" y="289" width="42.0" height="27" rx="3" fill="#6a1b9a"/>
+<text x="359.0" y="307" class="bar" text-anchor="middle">0</text>
+<line x1="240.0" y1="332" x2="240.0" y2="321" stroke="#334155" stroke-width="1.5"/>
+<path d="M 236.0 325 L 240.0 319 L 244.0 325" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 515.0 274 L 525.0 274 L 520.0 283 Z" fill="#334155"/>
+<rect x="898.0" y="289" width="42.0" height="27" rx="3" fill="#6a1b9a"/>
+<text x="919.0" y="307" class="bar" text-anchor="middle">20</text>
+<line x1="800.0" y1="332" x2="800.0" y2="321" stroke="#334155" stroke-width="1.5"/>
+<path d="M 796.0 325 L 800.0 319 L 804.0 325" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 1075.0 274 L 1085.0 274 L 1080.0 283 Z" fill="#334155"/>
+<rect x="240" y="349" width="1120" height="62" rx="4" fill="#f8fafc"/>
+<line x1="240.0" y1="349" x2="240.0" y2="411" stroke="#e2e8f0" />
+<line x1="380.0" y1="349" x2="380.0" y2="411" stroke="#e2e8f0" />
+<line x1="520.0" y1="349" x2="520.0" y2="411" stroke="#e2e8f0" />
+<line x1="660.0" y1="349" x2="660.0" y2="411" stroke="#e2e8f0" />
+<line x1="800.0" y1="349" x2="800.0" y2="411" stroke="#e2e8f0" />
+<line x1="940.0" y1="349" x2="940.0" y2="411" stroke="#e2e8f0" />
+<line x1="1080.0" y1="349" x2="1080.0" y2="411" stroke="#e2e8f0" />
+<line x1="1220.0" y1="349" x2="1220.0" y2="411" stroke="#e2e8f0" />
+<line x1="1360.0" y1="349" x2="1360.0" y2="411" stroke="#e2e8f0" />
+<text x="40" y="378" class="label" >Update Display</text>
+<text x="40" y="399" class="small" >Priority 4</text>
+<rect x="380.0" y="367" width="112.0" height="27" rx="3" fill="#ad5700"/>
+<text x="436.0" y="385" class="bar" text-anchor="middle">0</text>
+<line x1="240.0" y1="410" x2="240.0" y2="399" stroke="#334155" stroke-width="1.5"/>
+<path d="M 236.0 403 L 240.0 397 L 244.0 403" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M 1355.0 352 L 1365.0 352 L 1360.0 361 Z" fill="#334155"/>
+<rect x="240" y="427" width="1120" height="62" rx="4" fill="#f8fafc"/>
+<line x1="240.0" y1="427" x2="240.0" y2="489" stroke="#e2e8f0" />
+<line x1="380.0" y1="427" x2="380.0" y2="489" stroke="#e2e8f0" />
+<line x1="520.0" y1="427" x2="520.0" y2="489" stroke="#e2e8f0" />
+<line x1="660.0" y1="427" x2="660.0" y2="489" stroke="#e2e8f0" />
+<line x1="800.0" y1="427" x2="800.0" y2="489" stroke="#e2e8f0" />
+<line x1="940.0" y1="427" x2="940.0" y2="489" stroke="#e2e8f0" />
+<line x1="1080.0" y1="427" x2="1080.0" y2="489" stroke="#e2e8f0" />
+<line x1="1220.0" y1="427" x2="1220.0" y2="489" stroke="#e2e8f0" />
+<line x1="1360.0" y1="427" x2="1360.0" y2="489" stroke="#e2e8f0" />
+<text x="40" y="456" class="label" >Record Diagnostics</text>
+<text x="40" y="477" class="small" >Priority 5</text>
+<rect x="492.0" y="445" width="168.0" height="27" rx="3" fill="#455a64"/>
+<text x="576.0" y="463" class="bar" text-anchor="middle">0</text>
+<line x1="240.0" y1="488" x2="240.0" y2="477" stroke="#334155" stroke-width="1.5"/>
+<path d="M 236.0 481 L 240.0 475 L 244.0 481" fill="none" stroke="#334155" stroke-width="1.5"/>
+<text x="688.0" y="463" class="small" >Deadline = 100 ms (outside diagram)</text>
+<rect x="240" y="505" width="1120" height="62" rx="4" fill="#f8fafc"/>
+<line x1="240.0" y1="505" x2="240.0" y2="567" stroke="#e2e8f0" />
+<line x1="380.0" y1="505" x2="380.0" y2="567" stroke="#e2e8f0" />
+<line x1="520.0" y1="505" x2="520.0" y2="567" stroke="#e2e8f0" />
+<line x1="660.0" y1="505" x2="660.0" y2="567" stroke="#e2e8f0" />
+<line x1="800.0" y1="505" x2="800.0" y2="567" stroke="#e2e8f0" />
+<line x1="940.0" y1="505" x2="940.0" y2="567" stroke="#e2e8f0" />
+<line x1="1080.0" y1="505" x2="1080.0" y2="567" stroke="#e2e8f0" />
+<line x1="1220.0" y1="505" x2="1220.0" y2="567" stroke="#e2e8f0" />
+<line x1="1360.0" y1="505" x2="1360.0" y2="567" stroke="#e2e8f0" />
+<text x="40" y="534" class="label" >CPU idle</text>
+<rect x="758.0" y="523" width="42.0" height="27" rx="3" fill="#e2e8f0"/>
+<text x="779.0" y="541" class="small" text-anchor="middle">idle</text>
+<rect x="940.0" y="523" width="140.0" height="27" rx="3" fill="#e2e8f0"/>
+<text x="1010.0" y="541" class="small" text-anchor="middle">idle</text>
+<rect x="1178.0" y="523" width="182.0" height="27" rx="3" fill="#e2e8f0"/>
+<text x="1269.0" y="541" class="small" text-anchor="middle">idle</text>
+<text x="1360" y="632" class="tick" text-anchor="end">Time [ms]</text>
+<text x="40" y="652" class="small" >Legend: bar label = job release time; upward arrow = release; downward triangle = deadline.</text>
+<text x="40" y="675" class="small" >Red outline / triangle = deadline miss; dashed red line = waiting time of a missed job.</text>
+<text x="40" y="700" class="small" style="fill:#b42318;font-size:14px;font-weight:600">Misses: Sensors released at 10 finishes at 16 (deadline 14); Control released at 10 finishes at 18.5 (deadline 17).</text>
+</svg>

@@ -9,10 +9,10 @@ This is one possible solution. Other reasonable answers are possible if they are
 | C. The project team determines what functionality students need. | Requirements Engineering |
 | E. Software architects define the components and interfaces of the system. | Design |
 | A. Developers implement the connection search algorithm. | Implementation |
-| G. Testers check whether the complete application fulfills its specified requirements. | System Testing |
+| G. Testers check whether the complete application fulfills its specified requirements. | (System) Testing |
 | B. Students test whether the application satisfies their expectations. | Acceptance Testing |
-| D. The application is released to the university app store. | Deployment |
-| F. Developers fix defects and adapt the application after its release. | Maintenance / Evolution |
+| D. The application is released to the university app store. | Deployment & Maintenance |
+| F. Developers fix defects and adapt the application after its release. | Deployment &Maintenance |
 
 A reasonable order is:
 
